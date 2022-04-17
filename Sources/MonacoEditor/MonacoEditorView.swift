@@ -236,6 +236,10 @@ private extension MonacoEditorView {
     webView.uiDelegate = uiHandler
     webView.translatesAutoresizingMaskIntoConstraints = false
     webView.keyboardDisplayRequiresUserAction = false
+	if #available(macOS 12.0, *) {
+		webView.underPageBackgroundColor = .clear
+	}
+	webView.enclosingScrollView?.backgroundColor = .clear
     addSubview(webView)
     NSLayoutConstraint.activate([
       webView.topAnchor.constraint(equalTo: topAnchor),

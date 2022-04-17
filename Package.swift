@@ -39,7 +39,12 @@ let package = Package(
       name: "Gzip",
       url: "https://github.com/1024jp/GzipSwift.git",
       .upToNextMajor(from: "5.1.1")
-    )
+    ),
+	.package(
+		name: "SwiftUI-Introspect",
+		url: "https://github.com/siteline/SwiftUI-Introspect.git",
+		.upToNextMajor(from: "0.1.4")
+	)
   ],
   targets: [
     .target(
