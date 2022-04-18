@@ -179,13 +179,13 @@ private extension MonacoEditorView {
   }
 
   func loadEditor() {
-    let url = URL(string: "monacoeditor://editor")!
-    let request = URLRequest(
-      url: url,
-      cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
-      timeoutInterval: 10.0
-    )
-    webView.load(request)
+	  let resourceURL = Bundle.module.url(
+		forResource: "index",
+		withExtension: "html",
+		subdirectory: "Editor"
+	  )!
+	  let request = URLRequest(url: resourceURL)
+	  webView.load(request)
   }
 
   func setupWebView(
@@ -200,10 +200,10 @@ private extension MonacoEditorView {
     uiHandler = UIHandler()
 
     let configuration = WKWebViewConfiguration()
-    configuration.setURLSchemeHandler(
+    /*configuration.setURLSchemeHandler(
       MonacoEditorURLSchemeHandler(),
       forURLScheme: "monacoeditor"
-    )
+    )*/
     configuration.userContentController.add(
       UpdateTextScriptHandler(self),
       name: "updateText"
