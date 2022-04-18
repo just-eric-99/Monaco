@@ -21,8 +21,8 @@
     },
     "repository": "github:mfcollins3/SwiftMonacoEditor",
     "scripts": {
-		"build": "webpack --mode=production"
-	},
+        "build": "webpack --mode=production"
+    },
     "dependencies": {},
     "devDependencies": {
         "clean-webpack-plugin": "^3.0.0",

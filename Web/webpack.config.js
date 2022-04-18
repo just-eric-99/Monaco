@@ -28,7 +28,7 @@ module.exports = {
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, '../Sources/MonacoEditor/Editor'),
-        filename: 'app.js'
+        filename: '[contentHash].js'
     },
     module: {
         rules: [
@@ -49,7 +49,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MonacoWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Text Editor'
+            title: 'Monaco'
         })
     ]
 };
