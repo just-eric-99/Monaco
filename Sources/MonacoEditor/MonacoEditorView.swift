@@ -239,6 +239,7 @@ private extension MonacoEditorView {
 	if #available(macOS 12.0, *) {
 		webView.underPageBackgroundColor = .clear
 	}
+	  webView.autoresizingMask = [.width, .height]
 	webView.enclosingScrollView?.backgroundColor = .clear
     addSubview(webView)
     NSLayoutConstraint.activate([
