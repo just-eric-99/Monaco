@@ -181,8 +181,7 @@ private extension MonacoEditorView {
   func loadEditor() {
 	  let resourceURL = Bundle.module.url(
 		forResource: "index",
-		withExtension: "html",
-		subdirectory: "Editor"
+		withExtension: "html"
 	  )!
 	  let request = URLRequest(url: resourceURL)
 	  webView.load(request)
