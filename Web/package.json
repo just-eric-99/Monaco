@@ -20,7 +20,9 @@
         "url": "https://www.michaelfcollins3.me"
     },
     "repository": "github:mfcollins3/SwiftMonacoEditor",
-    "scripts": {},
+    "scripts": {
+		"build": "webpack --mode=production"
+	},
     "dependencies": {},
     "devDependencies": {
         "clean-webpack-plugin": "^3.0.0",
