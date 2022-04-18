@@ -51,7 +51,7 @@ let package = Package(
       name: "MonacoEditor",
       dependencies: ["Gzip"],
       resources: [
-        .process("Editor")
+        .process("Editor/index.html")
       ]
     ),
     .testTarget(
