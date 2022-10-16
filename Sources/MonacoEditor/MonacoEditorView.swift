@@ -4,7 +4,6 @@
 // and may not be reproduced, published, or disclosed to others without
 // company authorization.
 
-#if canImport(AppKit)
 import AppKit
 import UIKit
 import WebKit
